@@ -50,6 +50,20 @@
       transform: scale(1.1);
       box-shadow: 0 0 40px cyan, 0 0 60px blue;
     }
+    #qrcode {
+      margin-top: 40px;
+    }
+    #download {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: cyan;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+    }
 
     /* Keyframes */
     @keyframes glow {
@@ -78,5 +92,32 @@
     <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Robot 1">
     <img src="https://cdn-icons-png.flaticon.com/512/4712/4712106.png" alt="Robot 2">
   </div>
+
+  <!-- QR Code Section -->
+  <div id="qrcode"></div>
+  <button id="download">Download QR Code</button>
+
+  <!-- QR Code Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script>
+    // Generate QR Code with your live site link
+    const qr = new QRious({
+      element: document.createElement('canvas'),
+      value: "https://roninikitha-cmyk.github.io/rohith/",
+      size: 200
+    });
+
+    // Add it to the page
+    document.getElementById("qrcode").appendChild(qr.element);
+
+    // Download button
+    document.getElementById("download").addEventListener("click", function() {
+      const link = document.createElement("a");
+      link.href = qr.toDataURL("image/png");
+      link.download = "website_qr.png";
+      link.click();
+    });
+  </script>
 </body>
 </html>
+
