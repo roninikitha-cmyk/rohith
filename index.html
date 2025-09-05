@@ -8,11 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: black;
-            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            transition: background-color 0.5s, color 0.5s;
         }
         h1 {
             font-size: 60px;
@@ -26,7 +25,6 @@
         .ai {
             font-family: 'Orbitron', sans-serif;
             font-size: 50px;
-            color: #00ffcc;
             margin-bottom: 50px;
         }
         .robots img {
@@ -41,7 +39,7 @@
     <h1>PM Shir Kendriya Vidyalaya</h1>
 
     <div class="details">
-        Name: Tanishik A<br>
+        Name: Tanishk A<br>
         Class: 9th<br>
         Section: B<br>
         AI Teacher: Smriti
@@ -54,6 +52,19 @@
         <img src="https://cdn.pixabay.com/photo/2018/01/04/08/56/robot-3051083_1280.png" alt="Robot 2">
         <img src="https://cdn.pixabay.com/photo/2016/03/31/20/59/robot-1290295_1280.png" alt="Robot 3">
     </div>
+
+    <script>
+        // Function to generate random hex color
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+
+        // Apply random colors
+        document.body.style.backgroundColor = getRandomColor();
+        document.body.style.color = getRandomColor();
+        document.querySelector("h1").style.color = getRandomColor();
+        document.querySelector(".ai").style.color = getRandomColor();
+    </script>
 
 </body>
 </html>
