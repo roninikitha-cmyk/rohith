@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Page</title>
-    <!-- Google Fonts for design font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            color: yellow;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 60px;
-            margin-bottom: 50px;
-            color: yellow;
-            text-shadow: 2px 2px 5px #333;
-        }
-        .details {
-            font-size: 24px;
-            margin-bottom: 50px;
-            line-height: 1.8;
-            color: yellow;
-        }
-        .ai {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 50px;
-            color: yellow;
-            margin-bottom: 50px;
-            text-shadow: 2px 2px 8px #ff0;
-        }
-        .robots img {
-            width: 200px;
-            margin: 20px;
-            border-radius: 10px;
-            border: 3px solid yellow;
-            box-shadow: 0px 0px 15px yellow;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>PM Shree Kendriya Vidyalaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 60px;
+      margin-top: 40px;
+      text-shadow: 0 0 20px cyan, 0 0 40px blue;
+      animation: glow 2s infinite alternate;
+    }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 40px;
+      color: cyan;
+      margin: 20px 0;
+      text-shadow: 0 0 15px cyan, 0 0 30px blue;
+      animation: glow 2s infinite alternate;
+    }
+    .info {
+      margin-top: 40px;
+      font-size: 22px;
+      line-height: 1.8;
+    }
+    .robots {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    .robots img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px cyan;
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .robots img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px cyan, 0 0 60px blue;
+    }
+
+    /* Keyframes */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px cyan, 0 0 20px blue; }
+      to { text-shadow: 0 0 30px cyan, 0 0 60px blue; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
 </head>
 <body>
+  <h1>PM Shree Kendriya Vidyalaya</h1>
+  <h2>Artificial Intelligence</h2>
 
-    <h1>PM Shir Kendriya Vidyalaya</h1>
+  <div class="info">
+    <p><strong>Name:</strong> Chiluvuru Rohith</p>
+    <p><strong>Class:</strong> 9th</p>
+    <p><strong>Section:</strong> B</p>
+    <p><strong>AI Teacher Name:</strong> Smriti Sethi</p>
+  </div>
 
-    <div class="details">
-        Name: Tanishk A<br>
-        Class: 9th<br>
-        Section: B<br>
-        AI Teacher: Smriti
-    </div>
-
-    <div class="ai">Artificial Intelligence</div>
-
-    <div class="robots">
-        <img src="https://cdn.pixabay.com/photo/2017/07/31/11/21/robot-2555826_1280.png" alt="Robot 1">
-        <img src="https://cdn.pixabay.com/photo/2018/01/04/08/56/robot-3051083_1280.png" alt="Robot 2">
-        <img src="https://cdn.pixabay.com/photo/2016/03/31/20/59/robot-1290295_1280.png" alt="Robot 3">
-    </div>
-
+  <div class="robots">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Robot 1">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712106.png" alt="Robot 2">
+  </div>
 </body>
 </html>
